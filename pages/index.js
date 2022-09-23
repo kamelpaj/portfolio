@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { Canvas, useFrame } from "@react-three/fiber";
-import React, { Suspense, useRef, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import React, { Suspense } from "react";
 import Face from "../components/Face";
-import { Loader, PresentationControls } from "@react-three/drei";
+import { PresentationControls } from "@react-three/drei";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/logo192.png" />
       </Head>
 
-      <main className="pt-24 flex flex-col w-screen gap-4 ">
+      <main className="pt-24 flex flex-col w-screen gap-4">
         <h1 className="text-3xl font-bold text-center">Hi, I&apos;m Adam</h1>
         <div className="bg-zinc-800 md:w-11/12 lg:w-1/2 h-64 rounded-lg self-center">
           <Suspense fallback={null}>

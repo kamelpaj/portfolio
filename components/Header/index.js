@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import DrawMenu from "../DrawMenu";
 
 export const Header = () => {
+  const [open, setOpen] = useState(false);
   const HamburgerIcon = (
     <button
       type="button"
       className="text-white bg-zinc-800 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 rounded-full p-4 inline-flex mr-2  dark:hover:bg-zinc-700 dark:focus:ring-zinc-800 self-center lg:hidden"
+      onClick={() => setOpen(true)}
     >
       <svg
         aria-hidden="true"
@@ -24,7 +28,7 @@ export const Header = () => {
     </button>
   );
   return (
-    <header className="fixed w-screen flex justify-center top-3 h-16 ">
+    <header className="fixed w-screen flex justify-center h-16 ">
       <div className="rounded-full bg-zinc-900/95 w-11/12 flex justify-between backdrop-blur-sm ">
         <Link href="/">
           <a>
@@ -39,6 +43,7 @@ export const Header = () => {
         </Link>
         {HamburgerIcon}
       </div>
+      <DrawMenu open={open} setOpen={setOpen} />
     </header>
   );
 };
