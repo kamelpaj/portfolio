@@ -5,13 +5,6 @@ import Face from "../components/Face";
 import { PresentationControls } from "@react-three/drei";
 
 export default function Home() {
-
-  function preventScroll(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  }
-
   return (
     <div>
       <Head>
@@ -25,10 +18,7 @@ export default function Home() {
 
       <main className="pt-24 flex flex-col w-screen gap-4">
         <h1 className="text-3xl font-bold text-center">Hi, I&apos;m Adam</h1>
-        <div
-          className="bg-zinc-800 md:w-11/12 lg:w-1/2 h-64 rounded-lg self-center"
-          onScroll={preventScroll}
-        >
+        <div className="bg-zinc-800 md:w-11/12 lg:w-1/2 h-64 rounded-lg self-center touch-none">
           <Suspense fallback={null}>
             <Canvas>
               <ambientLight />
