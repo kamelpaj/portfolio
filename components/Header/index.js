@@ -17,7 +17,7 @@ export const Header = () => {
         <path
           d="M1.5 7.5H14.5M1.5 2.5H14.5M1.5 12.5H14.5"
           stroke="white"
-          stroke-linecap="round"
+          strokeLinecap="round"
         ></path>
       </svg>
       <span className="sr-only">Icon description</span>
