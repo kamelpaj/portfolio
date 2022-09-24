@@ -5,6 +5,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { HEADER_LINKS } from "../../constants";
 
 export default function DrawMenu(props) {
   const { open, setOpen } = props;
@@ -12,7 +13,7 @@ export default function DrawMenu(props) {
 
   useEffect(() => {
     router.events.on("routeChangeComplete", () => {
-      setOpen(false)
+      setOpen(false);
     });
     return () => {
       router.events.off("routeChangeComplete", () => {
@@ -77,26 +78,13 @@ export default function DrawMenu(props) {
                     </div>
                     <div className="relative mt-6 flex-1 px-4 sm:px-6">
                       <ul className="text-center text-xl">
-                        <li>
-                          <Link href="/about">
-                            <a>about</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/projects">
-                            <a>projects</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/work">
-                            <a>work</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/contact">
-                            <a>contact</a>
-                          </Link>
-                        </li>
+                        {HEADER_LINKS.map((hl, i) => (
+                          <li key={i} className="pb-4 text-2xl font-bold">
+                            <Link href={hl.url}>
+                              <a>{hl.label}</a>
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>

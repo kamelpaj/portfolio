@@ -18,7 +18,7 @@ export default function Home() {
 
       <main className="pt-24 flex flex-col w-screen gap-4">
         <h1 className="text-3xl font-bold text-center">Hi, I&apos;m Adam</h1>
-        <div className="bg-zinc-800 md:w-11/12 lg:w-1/2 h-64 rounded-lg self-center touch-none">
+        <div className="bg-zinc-800 sm:w-11/12 lg:w-1/2 h-64 rounded-lg self-center touch-none">
           <Suspense fallback={null}>
             <Canvas>
               <ambientLight />
@@ -36,7 +36,7 @@ export default function Home() {
             </Canvas>
           </Suspense>
         </div>
-        <div className="pl-4 self-center">
+        <div className="self-center m-4 lg:w-1/2">
           <p className="text-zinc-400 font-thin">psst... drag my face</p>
 
           <p className="text-xl font-medium">
