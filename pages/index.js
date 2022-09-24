@@ -3,10 +3,11 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import Face from "../components/Face";
 import { PresentationControls } from "@react-three/drei";
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Adam Hermansson</title>
         <meta
@@ -16,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/logo192.png" />
       </Head>
 
-      <main className="pt-24 flex flex-col w-screen gap-4">
+      <Layout>
         <h1 className="text-3xl font-bold text-center">Hi, I&apos;m Adam</h1>
         <div className="bg-zinc-800 sm:w-11/12 lg:w-1/2 h-64 rounded-lg self-center touch-none">
           <Suspense fallback={null}>
@@ -50,7 +51,7 @@ export default function Home() {
             <h1 className="text-3xl font-bold underline">Hello world {i}!</h1>
           </div>
         ))} */}
-      </main>
-    </div>
+      </Layout>
+    </>
   );
 }
