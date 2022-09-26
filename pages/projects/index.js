@@ -30,7 +30,7 @@ export default function Projects() {
             <p className="text-base text-zinc-400"> {p.description} </p>
             {p.liveUrl &&  <a href={p.liveUrl} className="hover:underline w-fit"> live </a> }
             <a href={p.github} className="hover:underline w-fit"> github </a>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {p.tags.map((t, i) => (
                 <p key={i} className="bg-zinc-800 text-zinc-400 rounded-lg px-1.5 py-1"> {t} </p>
               ))}
