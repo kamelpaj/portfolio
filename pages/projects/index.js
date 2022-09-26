@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <Layout>
       <h1 className="text-3xl font-bold text-center">Projects</h1>
-      <section className="sm:w-11/12 lg:w-1/2 self-center">
+      <section className="sm:w-11/12 lg:w-1/2 self-center p-4 lg:p-0">
         {projects.map((p, i) => (
           <article key={i} className="flex gap-1 flex-col pb-6 last:pb-0">
             <h3 className="text-2xl font-medium"> {p.title} </h3>
