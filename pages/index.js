@@ -19,7 +19,7 @@ export default function Home() {
 
       <Layout>
         <h1 className="text-3xl font-bold text-center">Hi, I&apos;m Adam</h1>
-        <div className="bg-zinc-800 sm:w-11/12 lg:w-1/2 h-64 rounded-lg self-center touch-none">
+        <div className="bg-zinc-800 h-64 rounded-lg self-center touch-none">
           <Suspense fallback={null}>
             <Canvas>
               <ambientLight />
