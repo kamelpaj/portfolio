@@ -5,7 +5,7 @@ const projects = [
     title: "bandet",
     description:
       "A small app for friends to post recordings of jam sessions to share. I built this for me and my friends so we could have a place to listen to our jam sessions. Am currently building a custom media player for this project. Will later add features to create your own band.",
-    liveUrl: "https://bandet.vercel.app/",
+    liveUrl: "https://bandet.adamhermansson.com/",
     github: "https://github.com/kamelpaj/bandet",
     tags: ["next.js", "react", "typescript", "supabase"],
   },
